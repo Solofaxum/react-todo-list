@@ -1,14 +1,17 @@
-import React from 'react'
-import Button from './Button'
-
+import React from "react";
+import Button, { SelectButton } from "./Button";
+import styles from "../styles/modules/app.module.scss";
 function appHeader() {
   return (
-    <div>
-        <h1>This is solomon</h1>
-      <Button variant="secondary">Click Me</Button>
+    <div className={styles.appHeader}>
+      <Button variant="primary">Click Me</Button>
+      <SelectButton id='status'>
+        <option value="all">ALL</option>
+        <option value="incomplete">Incomplete</option>
+        <option value="complete">Complete</option>
+      </SelectButton>
     </div>
-  )
+  );
 }
 
-export default appHeader
-
+export default appHeader;

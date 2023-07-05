@@ -7,7 +7,7 @@ const buttonTypes = {
   secondary: "secondary",
 };
 
-function Button({ children, type, variant, ...rest}) {
+export default function Button({ children, type, variant, ...rest}) {
   return (
     <button
       className={getClasses([
@@ -21,12 +21,14 @@ function Button({ children, type, variant, ...rest}) {
   );
 }
 
-function SelectButton({ children, ...rest }) {
+export function SelectButton({ children, ...rest }) {
   return (
-    <select className={getClasses([styles.button, styles.button__select])}>
+    <select className={getClasses([styles.button, 
+    styles.button__select])} {...rest}>
       {children}
     </select>
   );
 }
 
-export default Button;
+// export {SelectButton};
+// export default Button;
